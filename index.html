@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>cake story</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" integrity="sha512-PgQMlq+nqFLV4ylk1gwUOgm6CtIIXkKwaIHp/PAIWHzig/lKZSEGKEysh0TCVbHJXCLN7WetD8TFecIky75ZfQ==" crossorigin="anonymous" />
+    <link rel="icon" href="https://www.monginis.net/media/favicon/default/Favicon.jpg" type="image/x-icon" />
+
+ 
+    <style>
+        
+
+        #header {
+            height: auto;
+            padding: 10px;
+
+        }
+.topnav {
+  background-color: #d33443;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: pink;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color:#d33443;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+.carousel-inner img {
+    width:100%;
+    height: 50%;
+  }
+     
+
+        #partner-section-heading {
+             height: 100px;
+            padding: 20px;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+        text-align: center;
+           font-size: 50px;
+            color: brown;
+
+
+
+        }
+
+        #price-section-heading {
+            height: 100px;
+            padding: 20px;
+            margin: auto;
+            width: 50%;
+            padding: 20px;
+        text-align: center;
+           font-size: 50px;
+            color: brown;
+
+
+        }
+
+        #specialty-section-heading {
+       
+        
+            margin: auto;
+            width: 100%;
+            padding: 20px;
+            padding-bottom: 20px;
+           text-align: center;
+    font-size: 50px;
+            color: skyblue;
+
+
+
+        }
+
+        .featured-product {
+            background: white;
+            border: solid 1px grey;
+            padding: 10px;
+        }
+
+        #footer {
+            background: gray;
+            padding-left: 25px;
+        }
+
+
+
+        .fa {
+            padding: 5px;
+            font-size: 10px;
+            width: 20px;
+            text-align: center;
+            text-decoration: none;
+            margin: 5px 2px;
+            border-radius: 50%;
+        }
+
+        .fa:hover {
+            opacity: 0.7;
+        }
+
+       
+
+
+        * {
+            box-sizing: border-box
+        }
+
+        /* Slideshow container */
+        .slideshow-container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        /* Hide the images by default */
+        .mySlides {
+            display: none;
+        }
+
+        /* Next & previous buttons */
+        
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Caption text */
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+            color: #f2f2f2;
+            font-size: 12px;
+            padding: 8px 12px;
+            position: absolute;
+            top: 0;
+        }
+
+        /* The dots/bullets/indicators */
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active,
+        .dot:hover {
+            background-color: ;
+        }
+
+        /* Fading animation */
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 1.5s;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @-webkit-keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        @keyframes fade {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+        .highlight{
+            padding: 10px;
+        }
+        #section{
+            height: 200px;
+            width: 200px;
+        }
+        .btn-warning{
+            height: 40px;
+            font-size: 20px;
+            background-color: skyblue;
+            text-decoration: none;
+            border: none;
+        }
+
+        .content-home-item {
+    padding: 50px;
+}
+
+.contact {
+    margin-top: 30px;
+    background-color: rgb(49, 49, 49);
+    height: auto;
+    color: rgb(143, 131, 131);
+    padding-top: 30px;
+}
+
+
+/* Navbar links */
+
+.icon p {
+    float: left;
+    text-align: center;
+    padding: 10px;
+    color: rgb(146, 140, 140);
+    text-decoration: none;
+    font-size: 35px;
+}
+
+
+/* Current/active navbar link */
+
+
+/* Add responsiveness - will automatically display the navbar vertically instead of horizontally on screens less than 500 pixels */
+
+@media screen and (max-width: 500px) {
+    .icon {
+        float: none;
+        display: block;
+    }
+}
+
+#col {
+    background-color: #d33443;
+    color: black;
+    font-size: 15px;
+
+}
+
+.footer-text {
+    font-size: 20px;
+    text-decoration: none;
+}
+
+.footer-textMain a {
+    color: pink;
+    text-decoration: none;
+}
+
+#FooterServices p a {
+    text-decoration: none;
+    color: white
+
+    }
+
+    </style>
+}
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12" >
+
+                <div id="header">
+                  <h1 style="font-family:cursive; color: brown">  <img src="logo.png"> The Cake House</h1>
+                </div>
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="#news">About Us</a>
+  <a href="#contact">Contact</a>
+  <a href="#about">Our Work</a>
+   <a href="#about">Other Product</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+            </div>
+            </div>
+
+   </div>
+    
+<div class="coantainer">
+
+  
+    <div class="col-md-1">
+    </div>
+    <div class=col-md-10">
+<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  <!-- The slideshow -->
+  <div class="carousel-inner ">
+    <div class="carousel-item active">
+      <img src="1.jpg" alt="Los Angeles">
+    </div>
+    <div class="carousel-item">
+      <img src="slider.jpg" alt="Chicago" >
+    </div>
+    <div class="carousel-item">
+      <img src="slider-2.jpg" alt="New York">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+</div>
+ <div class="col-md-1">
+
+    </div>
+</div>
+
+
+            <!-- Slideshow container -->
+           
+  
+
+            <!-- The dots/circles -->
+          
+
+        
+
+            <!--specialty Section Heading-->
+<div class-"container">
+    <div class="row">
+
+            <div class="col-md-12" >
+               
+                <h1 id="specialty-section-heading">     <img  id="section" src="slider.jpg">OUR SPECIALITY </h1>
+
+            
+            </div>
+        </div>
+        </div>
+
+            <!--specialty a partner-->
+            <div class="container-fluid">
+                <div class="row">
+
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="cake1.jpg" alt="Custom Designs" height="350px"
+                        width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="shop2.jpg" alt="Delivery" height="350px"
+                        width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="staysafe.jpg" alt="shop online" height="350px"
+                        width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="best.jpg" alt="best price" height="350px" width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+            <div>
+                <br>
+                <br>
+            </div>
+
+
+
+
+
+            <!--become a partner Section Heading-->
+
+            <div class="col-lg-12">
+                <div class="highlight" class="jumbotron text-success">
+                    <h1 id="partner-section-heading"> BECOME A PARTNER </h1>
+
+                </div>
+            </div>
+
+            <!--Cake become a partner-->
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="distributor.jpg" alt="partner distribution" height="350"
+                        width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="manufacturing.jpg" alt="partner manufacturing" height="350"
+                        width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="shop.jpg" alt="partner shop" height="350" width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="stockiest.jpg" alt="partener super stokist" height="350"
+                        width="280px"><br>
+
+                    <div class="text-danger"></div>
+                    <div class="text-dark">
+
+                    </div>
+                    <button class="btn-warning btn-block">See More</button>
+                </div>
+            </div>
+
+
+
+
+            <!--Cake Buying Section Heading-->
+
+            <div class="col-lg-12">
+                <div class="highlight" class="jumbotron text-success">
+                    <h1 id="price-section-heading"> CAKE PRICES </h1>
+
+                </div>
+            </div>
+
+</div>
+</div>
+
+            <!--Cake Buying-->
+
+<div class="container-fluid">
+    <div class="row">
+<div class="col-lg-3">
+                <div class="featured-product highlight">
+                    <img class="img-rounded" src="merry-cherry-cake.jpg" alt="Cheery Cake" height="300"
+                        width="280px"><br>
+
+                    <div class="text-danger"><h2>Cheery Cake</h2></div>
+                    <div class="text-dark">
+                        <h4>Delia's Old-fashioned Cherry Cake recipe. OK. It is an old-fashioned, very English kind of cake,</h4>
+                    </div>
+                    <button class="btn-warning btn-block">Price : 600</button>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="featured-product">
+                    <img class="img-rounded" src="chocolate.jpg" alt="Chocolate Cake" height="300"
+                        width="280px"><br>
+
+                    <div class="text-danger"><h2>Chocolate Cake</h2></div>
+                    <div class="text-dark">
+                        <h4>Delia's Old-fashioned Chocolate Cake recipe. OK. It is an old-fashioned, very English kind of
+                        cake,</h4>
+                    </div>
+                    <button class="btn-warning btn-block">Price : 700</button>
+                </div>
+            </div>
+
+
+            <div class="col-lg-3">
+                <div class="featured-product">
+                    <img class="img-rounded" src="moist-vanilla-cake-pin.jpg" alt="vanilla Cake" height="300"
+                        width="280"><br>
+
+                    <div class="text-danger"><h2>vanilla Cake</h2></div>
+                    <div class="text-dark">
+                        <h4>Delia's Old-fashioned Vanilla Cake recipe. OK. It is an old-fashioned, very English kind of
+                        cake,</h4>
+                    </div>
+                    <button class="btn-warning btn-block">Price : 500</button>
+                </div>
+            </div>
+
+            <div class="col-lg-3">
+                <div class="featured-product">
+                    <img class="img-rounded" src="rich-pineapple-cake-500x500.png" alt="pineapple Cake" height="300"
+                        width="280"><br>
+
+                    <div class="text-danger"><h2>Pineapple Cake</h2></div>
+                    <div class="text-dark">
+                     <h4>   Delia's Old-fashioned Pineapple Cake recipe. OK. It is an old-fashioned, very English kind of
+                        cake,</h4>
+                    </div>
+                    <button class="btn-warning btn-block">Price : 400</button>
+                </div>
+            </div>
+
+
+
+      
+
+    </div>
+
+</div>
+
+           
+ <div class="container-fluid" class="contact">
+
+  <div class="col-md-12" >
+               
+                <h1 id="specialty-section-heading"> contact us </h1>
+
+            
+            </div>
+        <div id="Container">
+            <div id="col">
+                <div class="row">
+                    <div class=col-md-1>
+
+                    </div>
+                    <div class="col-md-6 ft">
+                        <div id="FooterMenu">
+
+                         
+
+  <div class="icon">
+                
+                <p>
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </p>
+                <p> <i class="fab fa-google-plus-g"></i></p>
+                <p> <i class="fab fa-twitter-square"></i></p>
+                <p><i class="fab fa-youtube"></i></p>
+                <p>
+                    <i class="fab fa-instagram"></i>
+                </p>
+            </div>
+
+                           
+
+
+                        </div>
+                    </div>
+                    <div class="col-md-2 ft">
+                        <div id="FooterServices">
+
+                            <div class="footer-text">
+                                <h2>Corporate Info</h2>
+                            </div>
+
+
+                            <p><a href="#">About US</a></p>
+                            <p><a href="#">Our Moral Reposibality</a></p>
+                            <p><a href="#">Disclaimer</a></p>
+                            <p><a href="#">Privacy Policy</a></p>
+                            <p><a href="#">Term & Condition</a></p>
+                            <P><a href="#"> Mongiland</a></P>
+                            <P><a href="#"> Delicia Foods</a></P>
+
+                        </div>
+                    </div>
+                 
+
+                </div>
+            </div>
+        </div>
+        <div class="conainer-fluid" style="background-color: rgb(31, 30, 30); color:blanchedalmond; padding:10px ;margin-top: 20px;">
+            <div class="row">
+                <h4 style="padding-left: 50px;">© 2017 Monginis. All Rights Reserved.</h4>
+            </div>
+        </div>
+    </div>
+     
+
+</body>
+
+</html>
